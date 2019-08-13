@@ -1,0 +1,46 @@
+<div class="play-screen-wrapper">
+    <div class="step2">
+        <h2> {{environment.title}}</h2>
+        <img-block></img-block>
+        <div class="clear"> </div>
+        <h3>На какой срок вложить деньги?</h3>
+        <div class="button-wrapper">
+          <div class="invest-button">
+            <table>            
+              <tr>
+                <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
+                <td>
+                  <button (click)="selected(environment.weekRates[week.index])" type="button" class="btn ">{{ week.title }}</button>
+                </td>
+                <td class="hand-col"></td>
+              </tr>
+            </table>
+          </div>
+          
+            <div class="invest-button">
+              <table>            
+                <tr>
+                  <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
+                  <td>
+                      <button (click)="selected(environment.monthRates[month.index])" type="button" class="btn ">{{ month.title }}</button>
+                  </td>
+                  <td class="hand-col"></td>
+                </tr>
+              </table>
+            </div>
+    
+            <div class="invest-button">
+              <table>            
+                <tr>
+                  <td class="hand-col"><img *ngIf="showHand3" width="50" src="assets/finger_right.png"/></td>
+                  <td>
+                      <button (click)="selected(environment.yearRates[year.index])" type="button" class="btn ">{{ year.title }}</button>
+                  </td>
+                  <td class="hand-col"></td>
+                </tr>
+              </table>
+            </div>
+        </div> 
+    </div>  
+  </div>
+  

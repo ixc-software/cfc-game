@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--build-arg', 'BRANCH_NAME=${BRANCH_NAME}', '-f', 'cloud-build.docker', '.']  
+timeout: 1200s

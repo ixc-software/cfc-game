@@ -1,0 +1,4 @@
+<app-g-step0 *ngIf="steps[0].visible" (select)="nextStep($event, 1)"></app-g-step0>
+<app-g-step1 *ngIf="steps[1].visible" (select)="nextStep($event, 2)"></app-g-step1>
+<app-g-step2 *ngIf="steps[2].visible" (select)="nextStep($event, 3)"></app-g-step2>
+<app-g-step3 *ngIf="steps[3].visible" [profit]="profit" (select)="nextStep($event, 0)"></app-g-step3>

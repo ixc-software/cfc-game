@@ -1,0 +1,46 @@
+<div class="play-screen-wrapper">
+    <div class="step1">
+        <h2> {{environment.title}}</h2>
+        <img-block></img-block>
+        <div class="clear"> </div>
+        <h3>Сколько у меня денег?</h3>
+        <div class="button-wrapper">
+          <div class="invest-button">
+            <table>            
+              <tr>
+                <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
+                <td>
+                  <button (click)="selected(10000)" type="button" class="btn ">Инвестировать {{10000 | cfccurrency}}</button>
+                </td>
+                <td class="hand-col"></td>
+              </tr>
+            </table>
+          </div>
+          
+            <div class="invest-button">
+              <table>            
+                <tr>
+                  <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
+                  <td>
+                    <button (click)="selected(100000)" type="button" class="btn ">Инвестировать {{100000 | cfccurrency}}</button>
+                  </td>
+                  <td class="hand-col"></td>
+                </tr>
+              </table>
+            </div>
+    
+            <div class="invest-button">
+              <table>            
+                <tr>
+                  <td class="hand-col"><img *ngIf="showHand3" width="50" src="assets/finger_right.png"/></td>
+                  <td>
+                    <button (click)="selected(1000000)" type="button" class="btn ">Инвестировать {{1000000 | cfccurrency}}</button>
+                  </td>
+                  <td class="hand-col"></td>
+                </tr>
+              </table>
+            </div>
+        </div> 
+    </div>  
+  </div>
+  
