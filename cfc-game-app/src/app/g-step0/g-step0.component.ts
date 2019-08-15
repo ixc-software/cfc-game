@@ -17,7 +17,7 @@ export class GStep0Component {
     const playPromise = audio.play();
 
     if (playPromise !== null) {
-      playPromise.catch(() => { audio.play(); });
+      playPromise.catch(() => { audio.play() });
     }
 
     this.select.emit({});

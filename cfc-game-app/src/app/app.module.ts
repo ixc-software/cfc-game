@@ -13,6 +13,7 @@ import { GStep3Component } from './g-step3/g-step3.component';
 import { ImgBlockComponent } from './img-block/img-block.component';
 import { CFCcurrencyPipe } from './pipes/cfc-currency-pipe';
 import { GStep0Component } from './g-step0/g-step0.component';
+import {DataService} from './store-service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { GStep0Component } from './g-step0/g-step0.component';
     AppRoutingModule,
     ProgressbarModule.forRoot()
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
