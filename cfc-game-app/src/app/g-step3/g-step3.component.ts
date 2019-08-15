@@ -26,9 +26,13 @@ export class GStep3Component implements OnInit {
     public getMoney() {
         this.data.getParams().subscribe(
             res => {
-                let url = `${environment.redirectUrl}?redirectUrl=T58MD/9G4BMMQ`;
-                Object.keys(res).forEach(item => url += `&${item}=${res[item]}`);
-                window.open(url, '_blank');
+                const clone = JSON.parse(JSON.stringify(res));
+                const trackingNextPart = res.tracking;
+                let url = `${environment.redirectUrl}${trackingNextPart}?`;
+                delete clone.tracking;
+                Object.keys(clone).forEach(item => url += `${item}=${res[item]}&`);
+                const newUrl = url.slice(0, -1);
+                window.open(newUrl, '_blank');
             }
         );
     }
