@@ -8,6 +8,7 @@
     "build-etherium": "ng build --configuration=etherium",
     "test": "ng test",
     "lint": "ng lint",
+    "int:extract": "ng xi18n",
     "e2e": "ng e2e"
   },
   "private": true,
