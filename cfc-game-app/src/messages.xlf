@@ -4,13 +4,23 @@
     <body>
       <trans-unit id="cccfb0e290382b39396b0760a01fdee35dc61fde" datatype="html">
         <source>Хочешь заработать?</source>
+        <target>Хочешь заработать?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step0/g-step0.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="a5d49d9f4bc4a1d0ee8ac9f4cccf552465542186" datatype="html">
+          <source>Жми сюда</source>
+          <target>Жми сюдa</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/g-step0/g-step0.component.html</context>
+            <context context-type="linenumber">5</context>
+          </context-group>
+        </trans-unit>
       <trans-unit id="a2247ec2002b8a59143b5d3de4230a5efb49ed8d" datatype="html">
         <source>Сколько у меня денег?</source>
+        <target>Сколько у меня денег?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step1/g-step1.component.html</context>
           <context context-type="linenumber">6</context>
@@ -18,6 +28,7 @@
       </trans-unit>
       <trans-unit id="0f2b44e12434438d645c90f5339d7c6047e70d93" datatype="html">
         <source>Инвестировать <x id="INTERPOLATION" equiv-text="{{10000 | cfccurrency}}"/></source>
+        <target>Инвестировать <x id="INTERPOLATION" equiv-text="{{10000 | cfccurrency}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step1/g-step1.component.html</context>
           <context context-type="linenumber">13</context>
@@ -25,6 +36,7 @@
       </trans-unit>
       <trans-unit id="aefeb28416365f577e0b4961ad20ccc402aa921a" datatype="html">
         <source>Инвестировать <x id="INTERPOLATION" equiv-text="{{100000 | cfccurrency}}"/></source>
+        <target>Инвестировать <x id="INTERPOLATION" equiv-text="{{100000 | cfccurrency}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step1/g-step1.component.html</context>
           <context context-type="linenumber">25</context>
@@ -32,6 +44,7 @@
       </trans-unit>
       <trans-unit id="3f031772c690c47224e0e72f19ec6fdf6c4d2a35" datatype="html">
         <source>Инвестировать <x id="INTERPOLATION" equiv-text="{{1000000 | cfccurrency}}"/></source>
+        <target>Инвестировать <x id="INTERPOLATION" equiv-text="{{1000000 | cfccurrency}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step1/g-step1.component.html</context>
           <context context-type="linenumber">37</context>
@@ -39,6 +52,7 @@
       </trans-unit>
       <trans-unit id="31f00a8e30b895f9db1016fc0c624a36d9b31f67" datatype="html">
         <source>На какой срок вложить деньги?</source>
+        <target>На какой срок вложить деньги?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step2/g-step2.component.html</context>
           <context context-type="linenumber">6</context>
@@ -46,6 +60,7 @@
       </trans-unit>
       <trans-unit id="53c2504b223e130f3153b87b2448e2d98386f8c7" datatype="html">
         <source>Вы заработали </source>
+        <target>Вы заработали</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step3/g-step3.component.html</context>
           <context context-type="linenumber">3</context>
@@ -53,6 +68,7 @@
       </trans-unit>
       <trans-unit id="6669dee711453f96627a2756205ff38503d143e7" datatype="html">
         <source>Заработать реальные деньги</source>
+        <target>Заработать реальные деньги</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step3/g-step3.component.html</context>
           <context context-type="linenumber">14</context>
@@ -60,11 +76,36 @@
       </trans-unit>
       <trans-unit id="87c668ecb31628e9ed4cd65ba2d4adc31bda0a01" datatype="html">
         <source>Оставить карманы пустыми</source>
+        <target>Оставить карманы пустыми</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step3/g-step3.component.html</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="571619365523ec71c8b3664491bdac2a1d45d59e" datatype="html">
+          <source>На <x id="INTERPOLATION" equiv-text="{{week.title}}"/> недель</source>
+          <target>На <x id="INTERPOLATION" equiv-text="{{week.title}}"/> недель</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
+            <context context-type="linenumber">13</context>
+          </context-group>
+        </trans-unit>
+<trans-unit id="49cf2ec98ed9c9f01411911aa3f69be4186a1186" datatype="html">
+          <source>На <x id="INTERPOLATION" equiv-text="{{month.title}}"/> месяцев</source>
+          <target>На <x id="INTERPOLATION" equiv-text="{{month.title}}"/> месяцев</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
+            <context context-type="linenumber">25</context>
+          </context-group>
+        </trans-unit>
+<trans-unit id="e46f796b6ea2d2e9263a08e97aed6224aaa32da6" datatype="html">
+          <source>На <x id="INTERPOLATION" equiv-text="{{year.title}}"/> лет</source>
+          <target>На <x id="INTERPOLATION" equiv-text="{{year.title}}"/> лет</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
+            <context context-type="linenumber">37</context>
+          </context-group>
+        </trans-unit>
     </body>
   </file>
 </xliff>

@@ -10,7 +10,7 @@
               <tr>
                 <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
                 <td>
-                  <button (click)="selected(environment.weekRates[week.index])" type="button" class="btn ">{{ week.title }}</button>
+                  <button (click)="selected(environment.weekRates[week.index])" type="button" class="btn " i18n>{{ week.title }}</button>
                 </td>
                 <td class="hand-col"></td>
               </tr>
@@ -22,7 +22,7 @@
                 <tr>
                   <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
                   <td>
-                      <button (click)="selected(environment.monthRates[month.index])" type="button" class="btn ">{{ month.title }}</button>
+                      <button (click)="selected(environment.monthRates[month.index])" type="button" class="btn " i18n>{{ month.title }}</button>
                   </td>
                   <td class="hand-col"></td>
                 </tr>
@@ -34,7 +34,7 @@
                 <tr>
                   <td class="hand-col"><img *ngIf="showHand3" width="50" src="assets/finger_right.png"/></td>
                   <td>
-                      <button (click)="selected(environment.yearRates[year.index])" type="button" class="btn ">{{ year.title }}</button>
+                      <button (click)="selected(environment.yearRates[year.index])" type="button" class="btn " i18n>{{ year.title }}</button>
                   </td>
                   <td class="hand-col"></td>
                 </tr>

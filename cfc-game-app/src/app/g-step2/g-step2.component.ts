@@ -22,6 +22,7 @@ export class GStep2Component implements OnInit {
   public environment = environment;
 
   ngOnInit() {
+    console.log(this);
     this.week.index = this.getRandomFromTo(2, environment.weekRates.length - 1);
     this.week.title = this.getWeekTitle(this.week.index);
 
@@ -73,42 +74,42 @@ export class GStep2Component implements OnInit {
 
 
   private getMonthTitle(index) {
-    switch (index + 1) {
-      case 1:
-        return 'На 1 месяц';
-      case 2:
-      case 3:
-      case 4:
-        return `На ${index + 1} месяц`;
-    }
+    // switch (index + 1) {
+    //   case 1:
+    //     return 'На 1 месяц';
+    //   case 2:
+    //   case 3:
+    //   case 4:
+    //     return `На ${index + 1} месяц`;
+    // }
 
-    return `На ${index + 1} месяцев`;
+    return `${index + 1}`; // `На ${index + 1} месяцев`
   }
 
   private getWeekTitle(index) {
-    switch (index + 1) {
-      case 1:
-        return 'На 1 неделю';
-      case 2:
-      case 3:
-      case 4:
-        return `На ${index + 1} недели`;
-    }
+    // switch (index + 1) {
+    //   case 1:
+    //     return 'На 1 неделю';
+    //   case 2:
+    //   case 3:
+    //   case 4:
+    //     return `На ${index + 1} недели`;
+    // }
 
-    return `На ${index + 1} недель`;
+    return `${index + 1}`; // `На ${index + 1} недель`
   }
 
   private getYearTitle(index) {
-    switch (index + 1) {
-      case 1:
-        return 'На 1 год';
-      case 2:
-      case 3:
-      case 4:
-        return `На ${index + 1} года`;
-    }
+    // switch (index + 1) {
+    //   case 1:
+    //     return 'На 1 год';
+    //   case 2:
+    //   case 3:
+    //   case 4:
+    //     return `На ${index + 1} года`;
+    // }
 
-    return `На ${index + 1} лет`;
+    return `${index + 1}`; // `На ${index + 1} лет`
   }
 
 }
