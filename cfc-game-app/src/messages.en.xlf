@@ -52,7 +52,7 @@
       </trans-unit>
       <trans-unit id="31f00a8e30b895f9db1016fc0c624a36d9b31f67" datatype="html">
         <source>На какой срок вложить деньги?</source>
-        <target>How many time from now?</target>
+        <target>INVESTMENT TERM?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step2/g-step2.component.html</context>
           <context context-type="linenumber">6</context>
@@ -76,7 +76,7 @@
       </trans-unit>
       <trans-unit id="87c668ecb31628e9ed4cd65ba2d4adc31bda0a01" datatype="html">
         <source>Оставить карманы пустыми</source>
-        <target>Leave your pocket empty</target>
+        <target>Leave MY pocket empty</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step3/g-step3.component.html</context>
           <context context-type="linenumber">26</context>
@@ -84,7 +84,7 @@
       </trans-unit>
       <trans-unit id="571619365523ec71c8b3664491bdac2a1d45d59e" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{week.title}}"/> недель</source>
-          <target>For <x id="INTERPOLATION" equiv-text="{{week.title}}"/> weeks</target>
+          <target><x id="INTERPOLATION" equiv-text="{{week.title}}"/> weeks</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">13</context>
@@ -92,7 +92,7 @@
         </trans-unit>
 <trans-unit id="49cf2ec98ed9c9f01411911aa3f69be4186a1186" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{month.title}}"/> месяцев</source>
-          <target>For <x id="INTERPOLATION" equiv-text="{{month.title}}"/> month</target>
+          <target><x id="INTERPOLATION" equiv-text="{{month.title}}"/> month</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">25</context>
@@ -100,7 +100,7 @@
         </trans-unit>
 <trans-unit id="e46f796b6ea2d2e9263a08e97aed6224aaa32da6" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{year.title}}"/> лет</source>
-          <target>For <x id="INTERPOLATION" equiv-text="{{year.title}}"/> year</target>
+          <target><x id="INTERPOLATION" equiv-text="{{year.title}}"/> year</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">37</context>
