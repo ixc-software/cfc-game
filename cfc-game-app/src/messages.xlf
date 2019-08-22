@@ -18,6 +18,14 @@
             <context context-type="linenumber">5</context>
           </context-group>
         </trans-unit>
+         <trans-unit id="62a1578ce2348d0fc50f55e3b79fada82ad47e2c" datatype="html">
+                   <source><x id="INTERPOLATION" equiv-text="{{environment.title}}"/></source>
+                                    <target><x id="INTERPOLATION" equiv-text="{{environment.title}}"/></target>
+                                    <context-group purpose="location">
+                                      <context context-type="sourcefile">app/g-step0/g-step1.component.html</context>
+                                      <context context-type="linenumber">5</context>
+                                    </context-group>
+                                  </trans-unit>
       <trans-unit id="a2247ec2002b8a59143b5d3de4230a5efb49ed8d" datatype="html">
         <source>Сколько у меня денег?</source>
         <target>Сколько у меня денег?</target>
