@@ -1,7 +1,8 @@
 <div class="play-screen-wrapper">
     <div *ngIf="this.profit > 0" class="step3">
         <h2 i18n>Вы заработали </h2>
-        <button type="button" class="btn btn-result">{{ profit | cfccurrency }}</button>
+<!--        <button type="button" class="btn btn-result">{{ profit | cfccurrency }}</button>-->
+        <button type="button" >{{ profit | cfccurrency }}</button>
         <img-block></img-block>
         <div class="clear"> </div>
 
@@ -11,7 +12,8 @@
               <tr>
                 <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
                 <td>
-                  <button (click)="getMoney()" type="button" class="btn " i18n>Заработать реальные деньги</button>
+<!--                  <button (click)="getMoney()" type="button" class="btn " i18n>Заработать реальные деньги</button>-->
+                  <button (click)="getMoney()" type="button"  i18n>Заработать реальные деньги</button>
                 </td>
                 <td class="hand-col"></td>
               </tr>
@@ -23,7 +25,8 @@
                 <tr>
                   <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
                   <td>
-                    <button (click)="selected($event)" type="button" class="btn " i18n>Оставить карманы пустыми</button>
+<!--                    <button (click)="selected($event)" type="button" class="btn " i18n>Оставить карманы пустыми</button>-->
+                    <button (click)="selected($event)" type="button" i18n>Оставить карманы пустыми</button>
                   </td>
                   <td class="hand-col"></td>
                 </tr>
@@ -45,7 +48,8 @@
               <tr>
                 <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
                 <td>
-                  <button (click)="getMoney()" type="button" class="btn ">Заработать реальные деньги</button>
+<!--                  <button (click)="getMoney()" type="button" class="btn ">Заработать реальные деньги</button>-->
+                  <button (click)="getMoney()" type="button" >Заработать реальные деньги</button>
                 </td>
                 <td class="hand-col"></td>
               </tr>
@@ -57,7 +61,8 @@
               <tr>
                 <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
                 <td>
-                  <button (click)="selected($event)" type="button" class="btn ">Оставить карманы пустыми</button>
+<!--                  <button (click)="selected($event)" type="button" class="btn ">Оставить карманы пустыми</button>-->
+                  <button (click)="selected($event)" type="button" >Оставить карманы пустыми</button>
                 </td>
                 <td class="hand-col"></td>
               </tr>
@@ -69,7 +74,8 @@
                 <tr>
                   <td class="hand-col"><img *ngIf="showHand3" width="50" src="assets/finger_right.png"/></td>
                   <td>
-                    <button (click)="selected($event)" type="button" class="btn ">Попробовать еще раз</button>
+<!--                    <button (click)="selected($event)" type="button" class="btn ">Попробовать еще раз</button>-->
+                    <button (click)="selected($event)" type="button" >Попробовать еще раз</button>
                   </td>
                   <td class="hand-col"></td>
                 </tr>

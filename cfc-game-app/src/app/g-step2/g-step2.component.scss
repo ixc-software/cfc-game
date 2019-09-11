@@ -1,5 +1,11 @@
 .play-screen-wrapper {
-    margin-top: 25px
+    margin-top: 25px;
+    h2{
+      padding: 0rem 1.5rem;
+    };
+  h3{
+    padding: 0rem 2rem;
+  }
 }
 
 .image-wrapper {
@@ -13,5 +19,10 @@
             .hand-col { width: 50px }
         }
     }
-    button { width: 100%; font-size: 1.45rem }
+    button {
+      width: 100%;
+      font-size: 1.45rem;
+      padding: 1rem 0rem;
+      line-height: 1.5rem;
+    }
 }
