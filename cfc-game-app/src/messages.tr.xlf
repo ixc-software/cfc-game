@@ -92,7 +92,7 @@
       </trans-unit>
       <trans-unit id="571619365523ec71c8b3664491bdac2a1d45d59e" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{week.title}}"/> недель</source>
-          <target>На <x id="INTERPOLATION" equiv-text="{{week.title}}"/> недель</target>
+          <target><x id="INTERPOLATION" equiv-text="{{week.title}}"/> hafta</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">13</context>
@@ -100,7 +100,7 @@
         </trans-unit>
 <trans-unit id="49cf2ec98ed9c9f01411911aa3f69be4186a1186" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{month.title}}"/> месяцев</source>
-          <target>На <x id="INTERPOLATION" equiv-text="{{month.title}}"/> месяцев</target>
+          <target><x id="INTERPOLATION" equiv-text="{{month.title}}"/> ay</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">25</context>
@@ -108,7 +108,7 @@
         </trans-unit>
 <trans-unit id="e46f796b6ea2d2e9263a08e97aed6224aaa32da6" datatype="html">
           <source>На <x id="INTERPOLATION" equiv-text="{{year.title}}"/> лет</source>
-          <target>На <x id="INTERPOLATION" equiv-text="{{year.title}}"/> лет</target>
+          <target><x id="INTERPOLATION" equiv-text="{{year.title}}"/> yıl</target>
           <context-group purpose="location">
             <context context-type="sourcefile">app/g-step1/g-step2.component.html</context>
             <context context-type="linenumber">37</context>

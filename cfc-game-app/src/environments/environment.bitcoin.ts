@@ -10,5 +10,5 @@ export const environment = {
   yearRates: [6433.87, 8004.59, 2537.16, 1294.83],
   redirectUrl: 'http://tracking.cfc.io', // /T58MD/9G4BMMQ/
   imageName: 'bitcoin-logo.png',
-  title: 'Инвестируем в биток'
+  title: ''
 };
