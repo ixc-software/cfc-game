@@ -76,7 +76,7 @@
       </trans-unit>
       <trans-unit id="6669dee711453f96627a2756205ff38503d143e7" datatype="html">
         <source>Заработать реальные деньги</source>
-        <target>Gerçek para kazanın</target>
+        <target>500 dolar kazan</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/g-step3/g-step3.component.html</context>
           <context context-type="linenumber">14</context>
