@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { inherits } from 'util';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from "./store-service";
+import {GameService} from "./services/game.service";
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,16 @@ export class AppComponent implements OnInit {
 
   constructor(
       private route: ActivatedRoute,
-      private data: DataService
+      private data: DataService,
+      private gameService: GameService
   ) {}
 
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => this.data.getParams().next(params));
+    this.gameService.gameReady().subscribe(resp => {
+      console.log('gameReady', resp);
+    });
 	// if (location.protocol === 'http:') {
     //         window.location.href = location.href.replace('http', 'https');
     //     }

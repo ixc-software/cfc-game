@@ -14,6 +14,9 @@ import { ImgBlockComponent } from './img-block/img-block.component';
 import { CFCcurrencyPipe } from './pipes/cfc-currency-pipe';
 import { GStep0Component } from './g-step0/g-step0.component';
 import {DataService} from './store-service';
+import {SNavigationComponent} from "./s-navigation/s-navigation.component";
+import {GameService} from "./services/game.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,14 +29,16 @@ import {DataService} from './store-service';
     GStep2Component,
     GStep3Component,
     ImgBlockComponent,
+    SNavigationComponent,
     CFCcurrencyPipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ProgressbarModule.forRoot()
   ],
-  providers: [DataService],
+  providers: [DataService, GameService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

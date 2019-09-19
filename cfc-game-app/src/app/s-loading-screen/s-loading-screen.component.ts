@@ -6,19 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./s-loading-screen.component.scss']
 })
 export class SLoadingScreenComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   public progress = 0;
 
   ngOnInit() {
     const interval = setInterval(() => {
-
       this.progress += 2.0;
       if (this.progress === 100) {
-          clearInterval(interval);
+        clearInterval(interval);
       }
     }, 100);
   }
-
 }

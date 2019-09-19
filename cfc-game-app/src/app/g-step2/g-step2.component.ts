@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class GStep2Component implements OnInit {
   @Output() select: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
   public showHand1 = false;
   public showHand2 = false;
@@ -40,7 +40,7 @@ export class GStep2Component implements OnInit {
   }
 
   public selected(rate) {
-    this.select.emit({rate});
+    this.select.emit({ rate });
   }
 
   public startShowHand() {
@@ -71,7 +71,6 @@ export class GStep2Component implements OnInit {
   private getRandomFromTo(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
 
   private getMonthTitle(index) {
     // switch (index + 1) {
@@ -111,5 +110,4 @@ export class GStep2Component implements OnInit {
 
     return `${index + 1}`; // `На ${index + 1} лет`
   }
-
 }

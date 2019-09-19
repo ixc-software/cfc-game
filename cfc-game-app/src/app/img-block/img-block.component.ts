@@ -7,12 +7,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./img-block.component.scss']
 })
 export class ImgBlockComponent implements OnInit {
-
-  constructor() { }
+  public imageName;
+  constructor() {}
 
   ngOnInit() {
     this.imageName = 'assets/' + environment.imageName;
   }
-
-  public imageName;
 }

@@ -1,6 +1,7 @@
-<div style="text-align:center; height:100%;">
-    <div class="wrapper" style="display: inline-block;">
-      <app-s-loading-screen *ngIf="showLoadingScreen"></app-s-loading-screen>
-      <app-s-play-screen *ngIf="showPlayScreen"></app-s-play-screen>
-    </div>  
+<div class="text-center h-100">
+  <div class="d-inline-block ml-4 mr-4">
+    <app-s-loading-screen *ngIf="showLoadingScreen"></app-s-loading-screen>
+    <app-s-play-screen *ngIf="showPlayScreen"></app-s-play-screen>
+    <app-s-navigation></app-s-navigation>
   </div>
+</div>
