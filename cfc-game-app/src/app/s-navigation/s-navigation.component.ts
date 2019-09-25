@@ -11,7 +11,7 @@ export class SNavigationComponent {
 
   downloadApp() {
     this.gameService.gameInstall().subscribe(resp => {
-      console.log('gameInstall');
+      console.log('gameInstall', resp);
     });
   }
 }

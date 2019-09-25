@@ -22,7 +22,6 @@ export class GStep2Component implements OnInit {
   public environment = environment;
 
   ngOnInit() {
-    console.log(this);
     this.week.index = this.getRandomFromTo(2, environment.weekRates.length - 1);
     this.week.title = this.getWeekTitle(this.week.index);
 

@@ -1,64 +1,43 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable()
 export class GameService {
   constructor(private http: HttpClient) {}
 
   gameWin(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
 
   gameFail(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
   gameStart(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
 
   gameEnd(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
 
   gameClose(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
 
   gameReady(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
+    // do some logic here
+    return of({});
   }
 
   gameInstall(): Observable<any> {
-    return this.http
-      .get(`http://localhost:3000/`)
-      .pipe // change to correct API request
-      // do some logic here
-      ();
-    // window.install && window.install();
+    // do some logic here
+    return of({});
   }
 }

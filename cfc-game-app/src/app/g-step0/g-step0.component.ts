@@ -13,7 +13,7 @@ export class GStep0Component {
   public environment = environment;
 
   public selected() {
-    const audio = new Audio('/assets/music.mp3');
+    const audio = new Audio('./assets/music.mp3');
     const playPromise = audio.play();
 
     if (playPromise !== null) {

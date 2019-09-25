@@ -11,6 +11,6 @@ export class ImgBlockComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.imageName = 'assets/' + environment.imageName;
+    this.imageName = './assets/' + environment.imageName;
   }
 }
