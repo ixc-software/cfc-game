@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import {dataBase64} from '../data-base64';
 
 @Component({
   selector: 'app-g-step0',

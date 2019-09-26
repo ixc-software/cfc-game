@@ -9,6 +9,6 @@ export const environment = {
   monthRates: [7994.42, 5067.11, 3960.91, 3620.81, 3630.68, 3236.76, 5648.03, 6596.54, 6543.20],
   yearRates: [6433.87, 8004.59, 2537.16, 1294.83],
   redirectUrl: 'http://tracking.cfc.io', // /T58MD/9G4BMMQ/
-  imageName: 'bitcoin-logo.png',
+  imageName: 'bitcoin_logo',
   title: ''
 };

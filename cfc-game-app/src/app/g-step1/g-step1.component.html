@@ -4,7 +4,7 @@
   <h3 i18n>Сколько у меня денег?</h3>
   <div>
     <div class="position-absolute pt-5">
-      <img *ngIf="showHand1" width="50" src="assets/finger_right.png" />
+      <img *ngIf="showHand1" width="50" [src]="sanitize()" />
     </div>
     <div>
       <button (click)="selected(10000)" type="button" i18n>
@@ -14,7 +14,7 @@
   </div>
   <div>
     <div class="position-absolute pt-5">
-      <img *ngIf="showHand2" width="50" src="assets/finger_right.png" />
+      <img *ngIf="showHand2" width="50" [src]="sanitize()" />
     </div>
     <div>
       <button (click)="selected(100000)" type="button" i18n>
@@ -24,7 +24,7 @@
   </div>
   <div>
     <div class="position-absolute pt-5">
-      <img *ngIf="showHand3" width="50" src="assets/finger_right.png" />
+      <img *ngIf="showHand3" width="50" [src]="sanitize()" />
     </div>
     <div>
       <button (click)="selected(1000000)" type="button" i18n>

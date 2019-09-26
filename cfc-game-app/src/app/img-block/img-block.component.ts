@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { DomSanitizer } from '@angular/platform-browser';
+import { dataBase64 } from '../data-base64';
 
 @Component({
   selector: 'img-block',
   templateUrl: './img-block.component.html',
   styleUrls: ['./img-block.component.scss']
 })
-export class ImgBlockComponent implements OnInit {
-  public imageName;
-  constructor() {}
+export class ImgBlockComponent {
+  constructor(private sanitizer: DomSanitizer) {}
 
-  ngOnInit() {
-    this.imageName = './assets/' + environment.imageName;
+  sanitize() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(dataBase64().dataBase64.assets[environment.imageName]);
   }
 }
