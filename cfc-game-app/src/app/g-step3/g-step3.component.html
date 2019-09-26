@@ -1,86 +1,16 @@
-<div class="play-screen-wrapper">
-    <div *ngIf="this.profit > 0" class="step3">
-        <h2 i18n>Вы заработали </h2>
-<!--        <button type="button" class="btn btn-result">{{ profit | cfccurrency }}</button>-->
-        <button type="button" >{{ profit | cfccurrency }}</button>
-        <img-block></img-block>
-        <div class="clear"> </div>
-
-        <div class="button-wrapper">
-          <div class="invest-button">
-            <table>
-              <tr>
-                <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
-                <td>
-<!--                  <button (click)="getMoney()" type="button" class="btn " i18n>Заработать реальные деньги</button>-->
-                  <button (click)="getMoney()" type="button"  i18n>Заработать реальные деньги</button>
-                </td>
-                <td class="hand-col"></td>
-              </tr>
-            </table>
-          </div>
-
-            <div class="invest-button">
-              <table>
-                <tr>
-                  <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
-                  <td>
-<!--                    <button (click)="selected($event)" type="button" class="btn " i18n>Оставить карманы пустыми</button>-->
-                    <button (click)="selected($event)" type="button" i18n>Оставить карманы пустыми</button>
-                  </td>
-                  <td class="hand-col"></td>
-                </tr>
-              </table>
-            </div>
-        </div>
-    </div>
-
-
-    <div *ngIf="this.profit < 0" class="step3">
-        <h2>Вы потеряли {{ profit }}</h2>
-        <button type="button" class="btn btn-result">{{ profit | cfccurrency }}</button>
-        <img-block></img-block>
-        <div class="clear"> </div>
-
-        <div class="button-wrapper">
-          <div class="invest-button">
-            <table>
-              <tr>
-                <td class="hand-col"><img *ngIf="showHand1" width="50" src="assets/finger_right.png"/></td>
-                <td>
-<!--                  <button (click)="getMoney()" type="button" class="btn ">Заработать реальные деньги</button>-->
-                  <button (click)="getMoney()" type="button" >Заработать реальные деньги</button>
-                </td>
-                <td class="hand-col"></td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="invest-button">
-            <table>
-              <tr>
-                <td class="hand-col"><img *ngIf="showHand2" width="50" src="assets/finger_right.png"/></td>
-                <td>
-<!--                  <button (click)="selected($event)" type="button" class="btn ">Оставить карманы пустыми</button>-->
-                  <button (click)="selected($event)" type="button" >Оставить карманы пустыми</button>
-                </td>
-                <td class="hand-col"></td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="invest-button">
-              <table>
-                <tr>
-                  <td class="hand-col"><img *ngIf="showHand3" width="50" src="assets/finger_right.png"/></td>
-                  <td>
-<!--                    <button (click)="selected($event)" type="button" class="btn ">Попробовать еще раз</button>-->
-                    <button (click)="selected($event)" type="button" >Попробовать еще раз</button>
-                  </td>
-                  <td class="hand-col"></td>
-                </tr>
-              </table>
-            </div>
-        </div>
-    </div>
+<div>
+  <h2 i18n *ngIf="this.profit >= 0">Вы заработали</h2>
+  <h2 *ngIf="this.profit < 0">Вы потеряли</h2>
+  <button type="button">{{ profit | cfccurrency }}</button>
+  <img-block></img-block>
+  <div class="mt-3">
+    <button class="p-0" (click)="getMoney()" type="button" i18n>
+      Заработать реальные деньги
+    </button>
   </div>
+  <div class="mt-3">
+    <button class="p-0" (click)="selected()" type="button" i18n>
+      Оставить карманы пустыми
+    </button>
+  </div>
+</div>

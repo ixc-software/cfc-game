@@ -23,26 +23,31 @@ export class SPlayScreenComponent implements OnInit {
     const playPromise = audio.play();
 
     if (playPromise !== null) {
-      playPromise.catch(() => { audio.play(); });
+      playPromise.catch(() => {
+        audio.play();
+      });
     }
 
     setTimeout(() => {
-      if (e.amount) { this.amount = e.amount; }
-      if (e.rate) { this.rate = e.rate; }
+      if (e.amount) {
+        this.amount = e.amount;
+      }
+      if (e.rate) {
+        this.rate = e.rate;
+      }
 
       const currentAmount = this.amount / environment.currentRate;
       const profitAmount = this.amount / e.rate;
 
       this.profit = Math.round((profitAmount - currentAmount) * environment.currentRate);
 
-      this.steps.forEach(s => s.visible = false);
+      this.steps.forEach(s => (s.visible = false));
       this.steps[step].visible = true;
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); // todo change later to scroll to host element
     }, 100);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  constructor() { }
+  constructor() {}
 }

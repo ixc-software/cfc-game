@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-game',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  constructor() { }
+  constructor(private gameService: GameService) {}
 
   public showLoadingScreen = true;
   public showPlayScreen = false;
@@ -16,5 +17,8 @@ export class GameComponent implements OnInit {
       this.showLoadingScreen = false;
       this.showPlayScreen = true;
     }, 3000);
+    this.gameService.gameStart().subscribe(resp => {
+      console.log('gameStart', resp);
+    });
   }
 }
