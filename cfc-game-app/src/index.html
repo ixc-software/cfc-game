@@ -9,5 +9,93 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <!--All files besides JS and HTML should be processed into base64.-->
+  <script src="data.js"></script>
+
+  <script>
+    // this is to parse base64 files
+    function getAssestByKey(key)
+    {
+      return assetsPackage[key];
+    }
+
+    function sendAction(id)
+    {
+      console.log("id="+id);
+      if(window.HttpAPI)
+      {
+        HttpAPI.sendPoint("action&action="+id);
+      }
+    }
+
+    //test code, delete it in release.
+    window.addEventListener("close",gameClose);
+    window.addEventListener("load",gameStart);
+    window.addEventListener("gameReady",gameReady);
+    window.addEventListener("gameEnd",gameEnd);
+    window.addEventListener("install",gameInstall);
+
+    //By Exposing a global public function name "gameClose" in the game, we will automatically call this function at the end of the game, so that developers can handle some logic at the end of the game, such as turn off this background music, etc.
+    function gameClose(){
+      //please use your gameClose logic code
+      destorySound();
+    }
+
+    //By exposing a global public function name "gameStart" in the game, we will automatically call this function at the beginning of the game,so that developers can handle some logic at the beginning of the game, such as starting the countdown, starting the background music, etc.
+    function gameStart()
+    {
+
+      //please use your start logic code
+      if(window.app && window.app.showGame)
+      {
+        window.app.showGame();
+      }
+    }
+
+
+    //All resources need to be loaded while game initializing, once the loading completes must call API like this:
+    function gameReady()
+    {
+      //please use your ready logic code
+      if(window.gameReady)
+      {
+        window.gameReady();
+      }
+    }
+
+    //At the end of the game (when the game wins or fails), you shuld call the API like this:
+    function gameEnd()
+    {
+      //please use your end logic code
+      if(window.gameEnd)
+      {
+        window.gameEnd();
+      }
+    }
+
+    var downloadBtn = document.getElementById('download-btn');
+    downloadBtn.addEventListener('click', function (e) {
+      gameInstall();
+    });
+
+    //On download click
+    function gameInstall()
+    {
+      console.log('THIS IS SPARTA!!!'); // for testing needs
+      //please use your install logic code
+      if(window.install)
+      {
+        window.install();
+      }
+    }
+
+    // gameInstall();
+    // gameReady();
+    // gameStart();
+    // gameEnd();
+    // gameClose();
+
+  </script>
 </body>
 </html>
