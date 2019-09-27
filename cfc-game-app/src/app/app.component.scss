@@ -39,10 +39,9 @@ html {
   }
 }
 
-@media (orientation: landscape) and (max-width: 812px) {
+@media (orientation: landscape) {
   div.navigation-panel {
-    display: flex !important;
-    justify-content: flex-end !important;
-    margin-right: -15rem;
+    height: 100%;
+    align-items: flex-end;
   }
 }
