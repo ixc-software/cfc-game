@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import {dataBase64} from '../data-base64';
 
 @Component({
   selector: 'app-g-step0',
@@ -14,7 +13,7 @@ export class GStep0Component {
   public environment = environment;
 
   public selected() {
-    const audio = new Audio('./assets/music.mp3');
+    const audio = new Audio('https://vocaroo.com/media_command.php?media=s009FWAtLr4w&command=download_mp3');
     const playPromise = audio.play();
 
     if (playPromise !== null) {

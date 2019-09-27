@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./s-play-screen.component.scss']
 })
 export class SPlayScreenComponent implements OnInit {
+  soundClick;
   public amount = 0;
   public rate = 0;
   public profit = 0;
@@ -19,12 +20,11 @@ export class SPlayScreenComponent implements OnInit {
   ];
 
   public nextStep(e, step) {
-    const audio = new Audio('assets/Sound_02025.mp3');
-    const playPromise = audio.play();
+    const playPromise = this.soundClick.play();
 
     if (playPromise !== null) {
       playPromise.catch(() => {
-        audio.play();
+        this.soundClick.play();
       });
     }
 
@@ -47,7 +47,7 @@ export class SPlayScreenComponent implements OnInit {
     }, 100);
   }
 
-  ngOnInit(): void {}
-
-  constructor() {}
+  ngOnInit(): void {
+    this.soundClick = new Audio('https://vocaroo.com/media_command.php?media=s0U9ojuthZ20&command=download_mp3');
+  }
 }

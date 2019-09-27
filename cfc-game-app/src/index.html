@@ -12,19 +12,19 @@
 
   <script>
     // this is to parse base64 files
-    function getAssestByKey(key)
-    {
-      return assetsPackage[key];
-    }
-
-    function sendAction(id)
-    {
-      console.log("id="+id);
-      if(window.HttpAPI)
-      {
-        HttpAPI.sendPoint("action&action="+id);
-      }
-    }
+    // function getAssestByKey(key)
+    // {
+    //   return assetsPackage[key];
+    // }
+    //
+    // function sendAction(id)
+    // {
+    //   console.log("id="+id);
+    //   if(window.HttpAPI)
+    //   {
+    //     HttpAPI.sendPoint("action&action="+id);
+    //   }
+    // }
 
     //test code, delete it in release.
     // window.addEventListener("close",gameClose);
@@ -71,10 +71,10 @@
       }
     }
 
-    var downloadBtn = document.getElementById('download-btn');
-    downloadBtn.addEventListener('click', function (e) {
-      gameInstall();
-    });
+    // var downloadBtn = document.getElementById('download-btn');
+    // downloadBtn.addEventListener('click', function (e) {
+    //   gameInstall();
+    // });
 
     //On download click
     function gameInstall()
