@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {DataService} from "./store-service";
-import {GameService} from "./services/game.service";
+import {DataService} from './store-service';
+import {GameService} from './services/game.service';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +23,5 @@ export class AppComponent implements OnInit {
     this.gameService.gameReady().subscribe(resp => {
       console.log('gameReady', resp);
     });
-	// if (location.protocol === 'http:') {
-    //         window.location.href = location.href.replace('http', 'https');
-    //     }
   }
 }

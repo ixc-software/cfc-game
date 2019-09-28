@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GameService } from '../services/game.service';
+declare const gameInstall: any;
 
 @Component({
   selector: 'app-s-navigation',
@@ -12,6 +13,7 @@ export class SNavigationComponent {
   downloadApp() {
     this.gameService.gameInstall().subscribe(resp => {
       console.log('gameInstall', resp);
+      gameInstall();
     });
   }
 }

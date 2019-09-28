@@ -1,7 +1,7 @@
 <div class="mt-2 pl-2 pr-2">
   <h2 i18n *ngIf="this.profit >= 0">Вы заработали</h2>
   <h2 *ngIf="this.profit < 0">Вы потеряли</h2>
-  <button type="button">{{ profit | cfccurrency }}</button>
+  <button class="mb-1" type="button">{{ profit | cfccurrency }}</button>
   <img-block></img-block>
   <div class="mt-1">
     <button class="p-0" (click)="getMoney()" type="button" i18n>
