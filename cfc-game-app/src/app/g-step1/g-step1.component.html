@@ -1,35 +1,29 @@
-<div class="mt-2">
+<div class="mt-2 pl-2 pr-2">
   <h2 i18n [innerHTML]="environment.title"></h2>
   <img-block></img-block>
-  <h3 i18n>Сколько у меня денег?</h3>
-  <div>
-    <div class="position-absolute pt-5">
-      <img *ngIf="showHand1" width="50" [src]="sanitize()" />
+  <h3 class="pl-1 pr-1" i18n>Сколько инвестировать?</h3>
+  <div class="mt-1">
+    <div class="position-absolute">
+      <img *ngIf="showHand1" class="img-finger-right" [src]="sanitize()" />
     </div>
     <div>
-      <button (click)="selected(10000)" type="button" i18n>
-        Инвестировать {{ 10000 | cfccurrency }}
-      </button>
+      <button (click)="selected(10000)" type="button" i18n>{{ 10000 | cfccurrency }}</button>
     </div>
   </div>
-  <div>
-    <div class="position-absolute pt-5">
-      <img *ngIf="showHand2" width="50" [src]="sanitize()" />
+  <div class="mt-1">
+    <div class="position-absolute">
+      <img *ngIf="showHand2" class="img-finger-right" [src]="sanitize()" />
     </div>
     <div>
-      <button (click)="selected(100000)" type="button" i18n>
-        Инвестировать {{ 100000 | cfccurrency }}
-      </button>
+      <button (click)="selected(100000)" type="button" i18n>{{ 100000 | cfccurrency }}</button>
     </div>
   </div>
-  <div>
-    <div class="position-absolute pt-5">
-      <img *ngIf="showHand3" width="50" [src]="sanitize()" />
+  <div class="mt-1">
+    <div class="position-absolute">
+      <img *ngIf="showHand3" class="img-finger-right" [src]="sanitize()" />
     </div>
     <div>
-      <button (click)="selected(1000000)" type="button" i18n>
-        Инвестировать {{ 1000000 | cfccurrency }}
-      </button>
+      <button (click)="selected(1000000)" type="button" i18n>{{ 1000000 | cfccurrency }}</button>
     </div>
   </div>
 </div>
