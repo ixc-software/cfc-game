@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build-bitcoin": "ng build --configuration=bitcoin",
     "build-etherium": "ng build --configuration=etherium",
-    "build-i18": "ng build --prod --i18n-locale ru --i18n-format xlf --i18n-file src/messages.xlf --output-path=dist --baseHref / && ng build --prod --i18n-locale en --i18n-format xlf --i18n-file src/messages.en.xlf --output-path=dist/en --baseHref /en/ && ng build --prod --i18n-locale tr --i18n-format xlf --i18n-file src/messages.tr.xlf --output-path=dist/tr --baseHref /tr/  && ng build --prod --i18n-locale zh --i18n-format xlf --i18n-file src/messages.zh.xlf --output-path=dist/zh --baseHref /zh/ && ng build --prod --i18n-locale es --i18n-format xlf --i18n-file src/messages.es.xlf --output-path=dist/es --baseHref /es/\n\n",
+    "build-i18": "ng build --configuration=i18 --i18n-locale ru --i18n-format xlf --i18n-file src/messages.xlf --output-path=dist --baseHref / && ng build --configuration=i18 --i18n-locale en --i18n-format xlf --i18n-file src/messages.en.xlf --output-path=dist/en --baseHref /en/ && ng build --configuration=i18 --i18n-locale tr --i18n-format xlf --i18n-file src/messages.tr.xlf --output-path=dist/tr --baseHref /tr/  && ng build --configuration=i18 --i18n-locale zh --i18n-format xlf --i18n-file src/messages.zh.xlf --output-path=dist/zh --baseHref /zh/ && ng build --configuration=i18 --i18n-locale es --i18n-format xlf --i18n-file src/messages.es.xlf --output-path=dist/es --baseHref /es/\n\n",
     "test": "ng test",
     "lint": "ng lint",
     "int:extract": "ng xi18n",
