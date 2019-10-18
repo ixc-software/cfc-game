@@ -65,7 +65,19 @@ html {
   }
 }
 
-@media (orientation: landscape){
+@media (orientation: landscape) and (max-width: 449px){
+  div.game-panel {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  div.navigation-panel {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 450px){
   div.full-game{
     //margin-top: 2rem; // todo try to align-middle vertically
     div.game-panel {
