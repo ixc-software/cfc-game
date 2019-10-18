@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { DomSanitizer } from '@angular/platform-browser';
-import { dataBase64 } from '../data-base64';
+declare const getAssetsByKey: any;
 
 @Component({
   selector: 'app-g-step1',
@@ -57,6 +57,6 @@ export class GStep1Component implements OnInit {
   }
 
   sanitize() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(dataBase64().dataBase64.assets.finger_right);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(getAssetsByKey('finger_right'));
   }
 }

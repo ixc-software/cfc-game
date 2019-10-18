@@ -10,7 +10,16 @@
 <body>
   <app-root></app-root>
 
+  <!--data.js file with all assets in base64  -->
+  <script type="text/javascript" src="data.js"></script>
+
   <script>
+
+    // receive base64 by key
+    function getAssetsByKey(key)
+    {
+      return assetsPackage[key];
+    }
     //By Exposing a global public function name "gameClose" in the game, we will automatically call this function at the end of the game, so that developers can handle some logic at the end of the game, such as turn off this background music, etc.
     function gameClose(){
       //please use your gameClose logic code
