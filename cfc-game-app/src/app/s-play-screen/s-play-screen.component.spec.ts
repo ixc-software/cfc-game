@@ -8,9 +8,8 @@ describe('SPlayScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SPlayScreenComponent ]
-    })
-    .compileComponents();
+      declarations: [SPlayScreenComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

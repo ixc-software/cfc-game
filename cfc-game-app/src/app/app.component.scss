@@ -1,154 +1,93 @@
-$assetPath : "/assets";
-
-html, body, .wrapper, .play-screen-wrapper, .step1, .step2, .step3, .button-wrapper {
-    height: 100%;
-}
-
-body {
-    background-color: transparent;
-}
+@import './variables';
 
 html {
-    background: url(#{$assetPath}/background_portrain.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-}
+  min-width: fit-content;
+  background: url(#{$background_portrain});
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  overflow: scroll;
 
-@media only screen and (orientation: landscape) {
-    html {
-        background: url(#{$assetPath}/background_lanscape.jpg) no-repeat center center fixed;
+  body {
+    background-color: transparent;
+    line-height: 1.2rem;
+
+    h2,
+    h3 {
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      line-height: 1rem;
+      font-size: 1rem;
     }
+
+    h3 {
+      font-size: 0.8rem;
+    }
+
+    img.img-crypt-logo{
+      width: 80px;
+    }
+    img.img-finger-right {
+      width: 25px;
+    }
+
+    button {
+      width: 7rem;
+      text-transform: uppercase;
+      background-image: url(#{$background-button-image});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 1rem;
+      border: 0px solid transparent;
+      background-color: transparent;
+      color: black;
+      font-weight: 600;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
 }
 
-//h2, h3 { color: white; }
-h2, h3 {
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ffffff 0%, #b1b1b1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-  display: table;
-  margin: 10px auto 0;
-  font-weight: bold;
+@media (orientation: portrait) {
+  div.game-panel {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  div.navigation-panel {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
-.btn {
-    color: white;
+@media (orientation: landscape){
+  div.full-game{
+    //margin-top: 2rem; // todo try to align-middle vertically
+    div.game-panel {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    div.navigation-panel {
+      flex: 0 0 25%;
+      max-width: 25%;
+      height: 100%;
+      align-items: flex-end;
+      display: contents;
+      text-align: center;
+    }
+  }
+
 }
 
-.btn-result {
-    font-size: 3.5rem;
+html ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
-
-
-button {
-  padding: 2rem 4rem;
-  line-height: 2.5rem;
-  color: black;
-
-  cursor: pointer;
-  position: relative;
-  font-size: 2rem;
-  border-radius: 3.75rem;
-  font-weight: 600;
-  border: 0px solid transparent;
-  background-color: transparent;
-  background-image: url(#{$assetPath}/button_1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-transform: uppercase;
-}
-
-//@media only all and (min-width: 412px) {
-//  .button-wrapper {
-//    button {
-//      line-height: 4rem !important;
-//    }
-//  }
-//}
-
-
-/*
-button {
-  padding: 1rem 3rem;
-  line-height: 1.5rem;
-  color: black;
-  cursor: pointer;
-  position: relative;
-  font-size: 2rem;
-  border-radius: 3.75rem;
-  font-weight: 600;
-  border: 0px solid transparent;
-  background-color: transparent;
-  background-image: url(#{$assetPath}/button_1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-transform: uppercase;
-}
-*/
-
-/*
-button {
-	cursor: pointer;
-    position: relative;
-    color: white;
-	padding: 2.5rem 7.5rem;
-	border-radius: 3.75rem;
-	line-height: 2.5rem;
-	font-size: 2rem;
-	font-weight: 600;
-	
-	border: 1px solid #012880;
-	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
-							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
-							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
-}
-
-button span {    
-	color: transparent;
-	background-image: linear-gradient(0deg, #EE82DA 0%, #FEFAFD 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
-}
-
-button::before {
-	content: "";
-	display: block;
-	height: 0.25rem;
-	position: absolute;
-	top: 0.5rem;
-	left: 50%;
-	transform: translateX(-50%);
-	width: calc(100% - 7.5rem);
-	background: #fff;
-	border-radius: 100%;
-	
-	opacity: 0.7;
-	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
-}
-
-button::after {
-	content: "";
-	display: block;
-	height: 0.25rem;
-	position: absolute;
-	bottom: 0.75rem;
-	left: 50%;
-	transform: translateX(-50%);
-	width: calc(100% - 7.5rem);
-	background: #fff;
-	border-radius: 100%;
-	
-	filter: blur(1px);
-	opacity: 0.05;
-	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
-}*/

@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { DomSanitizer } from '@angular/platform-browser';
+import { dataBase64 } from '../data-base64';
 
 @Component({
   selector: 'app-g-step1',
@@ -9,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class GStep1Component implements OnInit {
   @Output() select: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {}
 
   public showHand1 = false;
   public showHand2 = false;
@@ -18,7 +20,6 @@ export class GStep1Component implements OnInit {
   public environment = environment;
 
   ngOnInit() {
-
     setTimeout(() => {
       this.showHand1 = true;
 
@@ -27,7 +28,7 @@ export class GStep1Component implements OnInit {
   }
 
   public selected(amount) {
-    this.select.emit({amount});
+    this.select.emit({ amount });
   }
 
   public startShowHand() {
@@ -55,4 +56,7 @@ export class GStep1Component implements OnInit {
     }, 1000);
   }
 
+  sanitize() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(dataBase64().dataBase64.assets.finger_right);
+  }
 }

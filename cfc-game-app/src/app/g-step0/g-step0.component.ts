@@ -9,15 +9,17 @@ import { environment } from 'src/environments/environment';
 export class GStep0Component {
   @Output() select: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
   public environment = environment;
 
   public selected() {
-    const audio = new Audio('/assets/music.mp3');
+    const audio = new Audio('https://vocaroo.com/media_command.php?media=s009FWAtLr4w&command=download_mp3');
     const playPromise = audio.play();
 
     if (playPromise !== null) {
-      playPromise.catch(() => { audio.play() });
+      playPromise.catch(() => {
+        audio.play();
+      });
     }
 
     this.select.emit({});

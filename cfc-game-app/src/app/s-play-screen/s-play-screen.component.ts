@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./s-play-screen.component.scss']
 })
 export class SPlayScreenComponent implements OnInit {
+  soundClick;
   public amount = 0;
   public rate = 0;
   public profit = 0;
@@ -19,30 +20,34 @@ export class SPlayScreenComponent implements OnInit {
   ];
 
   public nextStep(e, step) {
-    const audio = new Audio('assets/Sound_02025.mp3');
-    const playPromise = audio.play();
+    const playPromise = this.soundClick.play();
 
     if (playPromise !== null) {
-      playPromise.catch(() => { audio.play(); });
+      playPromise.catch(() => {
+        this.soundClick.play();
+      });
     }
 
     setTimeout(() => {
-      if (e.amount) { this.amount = e.amount; }
-      if (e.rate) { this.rate = e.rate; }
+      if (e.amount) {
+        this.amount = e.amount;
+      }
+      if (e.rate) {
+        this.rate = e.rate;
+      }
 
       const currentAmount = this.amount / environment.currentRate;
       const profitAmount = this.amount / e.rate;
 
       this.profit = Math.round((profitAmount - currentAmount) * environment.currentRate);
 
-      this.steps.forEach(s => s.visible = false);
+      this.steps.forEach(s => (s.visible = false));
       this.steps[step].visible = true;
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); // todo change later to scroll to host element
     }, 100);
   }
 
   ngOnInit(): void {
+    this.soundClick = new Audio('https://vocaroo.com/media_command.php?media=s0U9ojuthZ20&command=download_mp3');
   }
-
-  constructor() { }
 }

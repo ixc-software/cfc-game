@@ -9,6 +9,6 @@ export const environment = {
   monthRates: [7994.42 * 0.03, 5067.11 * 0.03, 3960.91 * 0.03, 3620.81 * 0.03, 3630.68 * 0.03, 3236.76 * 0.03, 5648.03 * 0.03, 6596.54 * 0.03, 6543.20 * 0.03],
   yearRates: [6433.87 * 0.03, 8004.59 * 0.03, 2537.16 * 0.03, 1294.83 * 0.03],
   redirectUrl: 'http://tracking.cfc.io', // /T58MD/9G4BMMQ/
-  imageName: 'etherium_logo.png',
+  imageName: 'etherium_logo',
   title: 'Инвестируем в эфир'
 };

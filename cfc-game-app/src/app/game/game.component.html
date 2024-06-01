@@ -1,6 +1,11 @@
-<div style="text-align:center; height:100%;">
-    <div class="wrapper" style="display: inline-block;">
+<div class="text-center h-100">
+  <div class="row full-game mt-2 ml-1 mr-1">
+    <div class="game-panel p-0">
       <app-s-loading-screen *ngIf="showLoadingScreen"></app-s-loading-screen>
       <app-s-play-screen *ngIf="showPlayScreen"></app-s-play-screen>
-    </div>  
+    </div>
+    <div class="navigation-panel p-0">
+      <app-s-navigation></app-s-navigation>
+    </div>
   </div>
+</div>

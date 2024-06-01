@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { DomSanitizer } from '@angular/platform-browser';
+import { dataBase64 } from '../data-base64';
 
 @Component({
   selector: 'app-g-step2',
@@ -9,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class GStep2Component implements OnInit {
   @Output() select: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {}
 
   public showHand1 = false;
   public showHand2 = false;
@@ -22,7 +24,6 @@ export class GStep2Component implements OnInit {
   public environment = environment;
 
   ngOnInit() {
-    console.log(this);
     this.week.index = this.getRandomFromTo(2, environment.weekRates.length - 1);
     this.week.title = this.getWeekTitle(this.week.index);
 
@@ -40,7 +41,7 @@ export class GStep2Component implements OnInit {
   }
 
   public selected(rate) {
-    this.select.emit({rate});
+    this.select.emit({ rate });
   }
 
   public startShowHand() {
@@ -71,7 +72,6 @@ export class GStep2Component implements OnInit {
   private getRandomFromTo(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
 
   private getMonthTitle(index) {
     // switch (index + 1) {
@@ -112,4 +112,7 @@ export class GStep2Component implements OnInit {
     return `${index + 1}`; // `На ${index + 1} лет`
   }
 
+  sanitize() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(dataBase64().dataBase64.assets.finger_right);
+  }
 }
